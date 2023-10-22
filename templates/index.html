@@ -6,7 +6,25 @@
     <title>FizzBuzz</title>
 </head>
 <body>
-    <h2 class="p1">{{% number %}}</h2>
-    <script src="url_for{{'static', filename='JS/script.js'}}"></script>
+    <h1>Welcome to FizzBuzz</h1>
+    {% for i in range(0, 101)%}
+    {% if i % 3 == 0 and i % 5 == 0%}
+    <ul>
+        <li>{{ i }} FizzBuzz</li>
+    </ul>
+    {% elif i % 3 == 0 %}
+    <ul>
+        <li>{{ i }} Fizz</li>
+    </ul>
+    {% elif i % 5 == 0 %}
+    <ul>
+        <li>{{ i }} Buzz</li>
+    </ul>
+    {% else %}
+    <ul>
+        <li>{{ i }}</li>
+    </ul>
+    {% endif %}
+    {% endfor %}
 </body>
 </html>
